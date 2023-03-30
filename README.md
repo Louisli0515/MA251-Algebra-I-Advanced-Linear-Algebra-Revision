@@ -47,3 +47,41 @@ Given a linear map $T: V\to W$ and the ordered bases $\mathbf{E} = (e_{1},...,e_
 * Eigenvalues of a tranpose of a mtrix are equal.
 * Determinants are equal to each other as well. $$\det(A) = \det(A^{t}).$$
 * Determinant properties: $$\det(AB) = \det(A)\det(B),\quad \det(\alpha A) = \alpha^{n} A$$ where $n = \dim(A)$ and $\alpha\in\mathbb{R}$. 
+
+### Week 3
+
+In week 3's support class, there are some definitions and theorems we should bear in mind.
+
+#### Characteristic polynomial and minimal polynomial
+
+* Definition for Characteristic polynomial: $$c_{A}(x) = \det(A-xI_{n})$$ where $n = \dim(A)$. 
+* Definition for Minimal polynomial: $$\mu_{A}(x) = 0$$ with the least degree and monic.
+* By Cayley Hamilton Theorem, $$\mu_{A}(x)\vert c_{A}(x).$$
+
+#### Eigenspace
+
+* If the question asks you to find the generalised eigenspace of a matrix $A$ of eigenvalue $\lambda$, then it means to find the nullspace of it, meaning to find all $\mathbf{v}$ s such that $$(A-\lambda I_{n})^{r}\mathbf{v} = 0,$$ where $r$ is determined by the eigenspace's dimension.
+
+#### Diagonalisable
+
+* A matrix $A$ is diagonalisable if and only if has a basis of eigenvectors.
+
+#### Something about $(J_{\lambda,n} - \lambda I_{n})^{r}$
+
+* Note that $(J_{\lambda,n} - \lambda I_{n})^{r}$ is shown in the result like follows:
+```math
+\begin{bmatrix}0&1&0&0&0&...\\ 0 & 0&1&0&0&...\\ 0&0&0&1&0&...\\ \vdots&\vdots&\vdots&\vdots&\vdots \end{bmatrix}^{r}.
+```
+
+This is nothing but we move the diagonal line of 1 upward by one place.
+
+* In particular, $(J_{\lambda,n} - \lambda I_{n})^{n-1}$ is a matrix with all zeros apart from the $1,n$ entry, which is a 1.
+
+#### Direct Sum
+
+* Remember some properties: $$\det(A\oplus B) = \det(A)\det(B),$$ and $$\mu_{A\oplus B}(A\oplus B) = \mu_{A\oplus B}(A)\oplus \mu_{A\oplus B}(B). $$
+* Let $M = A\oplus B$, then $$c_{M}(x) = c_{A}(x)c_{B}(x)$$ and $$\mu_{M}(x) = lcm(\mu_{A}(x), \mu_{B}(x)).$$
+
+#### Alternative way to calculate $c_{A}(x)$ and $\mu_{A}(x)$
+
+* Theorem 2.7.4 in the notes says $$c_{A}(x) = (-1)^{n}\prod_{i=1}^{r}(x-\lambda_{i})^{a_{i}},$$ where $a_{i}$ is the sum of the degrees of Jordan blocks of $A$ of eigenvalue $\lambda_{i}$ and $$\mu_{A}(x) = \prod_{i=1}^{r}(x-\lambda_{i})^{b_{i}},$$ where $b_{i}$ is the largest among the degrees of Jordan blocks of $A$ of eigenvalue $\lambda_{i}$.
