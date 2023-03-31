@@ -113,3 +113,62 @@ There are two ways of doing it.
 * Theorem 2.9.1 also states that the number of Jordan blocks of $J$ with eigenvalue $\lambda$ is equal to the nullity $(A-\lambda I_{n})$.
 * Again by Theorem 2.7.4, the power of $c_{A}(x)$ is the sum of sizes of Jordan blocks and the power of $\mu_{A}(x)$ is the largest size of the Jordan block.
 * Compare these two theorems, we can know the combination of Jordan blocks with each eigenvalue.
+
+### Week 5
+
+[MA251_Algebra_I_week_5.pdf](https://github.com/Louisli0515/MA251-Algebra-I-Advanced-Linear-Algebra-Revision/files/11127275/MA251_Algebra_I_week_5.pdf)
+
+In week 5's support class, we are still focusing on some algorithms.
+
+#### More about JCF
+
+* Last week we learnt how to compute JCF of a matrix $A$. However sometimes the question asks to find a matrix $P$ such that $$P^{-1}AP = J.$$
+* We first find the Jordan basis of $A$. Note here that if $\dim(A) > \text{number of vectors}$, we first need to choose two random eigenvectors which are linearly independent, namely $\mathbf{v}_2$ and $\mathbf{v}_4$. (Assume $\dim(A) = 4$ and we only have one eigenvalue)
+* Be careful here the Jordan chain is computed reversely, so $$\mathbf{v}_1=(A-\lambda I_4)\mathbf{v}_2$$ and $$\mathbf{v}_3=(A-\lambda I_4)\mathbf{v}_4.$$ Check that $\mathbf{v}_1$ and $\mathbf{v}_3$ are linearly independent.
+* Then 
+```math
+P = \begin{bmatrix} \mathbf{v}_1 & \mathbf{v}_2 & \mathbf{v}_3 & \mathbf{v}_4 \end{bmatrix}.
+```
+
+### Powers of matrix
+
+There are two methods to compute it.
+* ***Direct Calculation***
+* If $J = P^{-1}AP$ is the JCF of $A$ then it is sufficient to compute $J^{n}$ because of the telescoping product $$A^{n} = (PJP^{-1})^{n} = PJ^{n}P^{-1}.$$
+* Note that $$(B\oplus C)^{n} = B^{n}\oplus C^{n}.$$
+* By induction, 
+
+```math
+J_{\lambda,k}^{n} = \begin{bmatrix} \lambda^{n} & n\lambda^{n-1} & ... & C_{k-1}^{n}\lambda^{n-k+1}\\
+0 & \lambda^{n} & ... & C_{k-2}^{n}\lambda^{n-k+2}\\
+\vdots & \vdots & \vdots & \vdots\\
+0 & 0 & ... & \lambda^{n}\end{bmatrix}.
+```
+
+* ***Lagrange's Interpolation***
+* Find the minimal polynomial $\mu_{A}(x)$ first, here suppose $\mu_{A}(z) = (z+2)^{2}.$
+* Given the degree of $\mu_{A}(x)$ is 2, we take the Lagrange interpolation of $z^{n}$ at the roots of $(z+2)^{2}$ to be $h(z) = \alpha z + \beta.$
+* To determine $\alpha$ and $\beta$, we need to solve $$(\lambda)^n = h(\lambda) = -\alpha \lambda + \beta,$$ and $$n(\lambda)^{n-1} = h'(\lambda) = \alpha.$$
+* Therefore, $$A^{n} = \alpha A+\beta I.$$
+
+### Function of matrix
+
+Similarly, it has two methods.
+
+* ***Direct Calculation***
+
+* Let $J = P^{-1}AP$ with $J$ being the JCF of $A$, then $$f(A) = Pf(J)P^{-1}.$$ and 
+
+```math
+f(J_{\lambda,k}) = \begin{bmatrix} f(\lambda) & f'(\lambda) & ... & f^{[k-1]}(\lambda)\\
+0 & f(\lambda) & ... & f^{[k-2]}(\lambda)\\
+\vdots & \vdots & \vdots & \vdots\\
+0 & 0 & ... & f(\lambda)\end{bmatrix},
+```
+where $$f^{[k]}(z) = \frac{1}{k!}f^{(k)}(z).$$
+
+* ***Lagrange's Interpolation***
+* Find the minimal polynomial $\mu_{A}(x)$ first, here suppose again $\mu_{A}(x) = (z+2)^{2}.$
+* Given the degree is 2, we take the Lagrangfe interpolation of $z^{n}$ at the roots of $(z+2)^{2}$ to be $h(z) = \alpha z+ \beta.$
+* To determine $\alpha$ and $\beta$, we solve $$f(\lambda) = h(\lambda) = -\alpha \lambda + \beta,$$ and $$f'(\lambda) = h'(\lambda) = \alpha.$$
+* Therefore, $$f(A) = \alpha A+\beta I.$$
