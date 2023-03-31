@@ -88,3 +88,28 @@ This is nothing but we move the diagonal line of 1 upward by one place.
 #### Alternative way to calculate $c_{A}(x)$ and $\mu_{A}(x)$
 
 * Theorem 2.7.4 in the notes says $$c_{A}(x) = (-1)^{n}\prod_{i=1}^{r}(x-\lambda_{i})^{a_{i}},$$ where $a_{i}$ is the sum of the degrees of Jordan blocks of $A$ of eigenvalue $\lambda_{i}$ and $$\mu_{A}(x) = \prod_{i=1}^{r}(x-\lambda_{i})^{b_{i}},$$ where $b_{i}$ is the largest among the degrees of Jordan blocks of $A$ of eigenvalue $\lambda_{i}$.
+
+### Week 4
+
+[MA251_Algebra_I_week_4.pdf](https://github.com/Louisli0515/MA251-Algebra-I-Advanced-Linear-Algebra-Revision/files/11122508/MA251_Algebra_I_week_4.pdf)
+
+In week 4's support class, we should focus on the algorithms and theorems of JCF.
+
+#### Jordan basis
+
+* The algorithm of finding Jordan basis is to find the value of r such that $$(A-\lambda I_{n})^{r} = 0.$$ 
+* Then, choose a random vector $\mathbf{v}$ such that $$\mathbf{v}\in{\ker(A-\lambda I_{n})^{r}}\setminus{\ker(A-\lambda I_{n})^{r-1}},$$ i.e. choose $\mathbf{v}$ such that $$(A-\lambda I_{n})^{r}= 0\quad\text{and}\quad (A-\lambda I_{n})^{r-1}\ne 0.$$
+* After that, compute the second $\mathbf{v}'$ using $$\mathbf{v}' = (A-\lambda I_{n})\mathbf{v}.$$
+* Continute the above process till the final vector.
+
+#### Compute JCF of a matrix $A$
+
+There are two ways of doing it.
+
+* Brutal force: By calculating the characteristic polynomial $c_{A}(x)$ and Cayley Hamilton Theorem, we can find the minimal polynomial $\mu_{A}(x)$.
+* By Theorem 2.7.4, we know the power of $c_{A}(x)$ is the sum of sizes of Jordan blocks and the power of $\mu_{A}(x)$ is the largest size of the Jordan block.
+
+* Nullity method: By Theorem 2.9.1, we know that for $i > 0$, the number of Jordan blocks of $J$ with eigenvalue $\lambda$ and degree at least $i$ is equal to nullity $((A-\lambda I_{n})^{i})$ - nullity $((A-\lambda I_{n})^{i-1})$.
+* Theorem 2.9.1 also states that the number of Jordan blocks of $J$ with eigenvalue $\lambda$ is equal to the nullity $(A-\lambda I_{n})$.
+* Again by Theorem 2.7.4, the power of $c_{A}(x)$ is the sum of sizes of Jordan blocks and the power of $\mu_{A}(x)$ is the largest size of the Jordan block.
+* Compare these two theorems, we can know the combination of Jordan blocks with each eigenvalue.
