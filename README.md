@@ -50,6 +50,8 @@ Given a linear map $T: V\to W$ and the ordered bases $\mathbf{E} = (e_{1},...,e_
 
 ### Week 3
 
+[MA251_Algebra_I_week_3.pdf](https://github.com/Louisli0515/MA251-Algebra-I-Advanced-Linear-Algebra-Revision/files/11120383/MA251_Algebra_I_week_3.pdf)
+
 In week 3's support class, there are some definitions and theorems we should bear in mind.
 
 #### Characteristic polynomial and minimal polynomial
@@ -65,6 +67,7 @@ In week 3's support class, there are some definitions and theorems we should bea
 #### Diagonalisable
 
 * A matrix $A$ is diagonalisable if and only if has a basis of eigenvectors.
+* Sometimes when we compute all the generalised eigenvectors and want to determine if the matrix is diagonlisable or not, we need to check if they are all eigenvectors of the matrix, i.e. Check if $$A\mathbf{v} = \lambda \mathbf{v}.$$ If there are less number of eigenvectors than the dimension of the matrix, then it cannot form a basis of eigenvectors and hence the matrix $A$ is not diagonlisable.
 
 #### Something about $(J_{\lambda,n} - \lambda I_{n})^{r}$
 
