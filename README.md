@@ -106,10 +106,10 @@ In week 4's support class, we should focus on the algorithms and theorems of JCF
 
 There are two ways of doing it.
 
-* Brutal force: By calculating the characteristic polynomial $c_{A}(x)$ and Cayley Hamilton Theorem, we can find the minimal polynomial $\mu_{A}(x)$.
+* ***Brutal force***: By calculating the characteristic polynomial $c_{A}(x)$ and Cayley Hamilton Theorem, we can find the minimal polynomial $\mu_{A}(x)$.
 * By Theorem 2.7.4, we know the power of $c_{A}(x)$ is the sum of sizes of Jordan blocks and the power of $\mu_{A}(x)$ is the largest size of the Jordan block.
 
-* Nullity method: By Theorem 2.9.1, we know that for $i > 0$, the number of Jordan blocks of $J$ with eigenvalue $\lambda$ and degree at least $i$ is equal to nullity $((A-\lambda I_{n})^{i})$ - nullity $((A-\lambda I_{n})^{i-1})$.
+* ***Nullity method***: By Theorem 2.9.1, we know that for $i > 0$, the number of Jordan blocks of $J$ with eigenvalue $\lambda$ and degree at least $i$ is equal to nullity $((A-\lambda I_{n})^{i})$ - nullity $((A-\lambda I_{n})^{i-1})$.
 * Theorem 2.9.1 also states that the number of Jordan blocks of $J$ with eigenvalue $\lambda$ is equal to the nullity $(A-\lambda I_{n})$.
 * Again by Theorem 2.7.4, the power of $c_{A}(x)$ is the sum of sizes of Jordan blocks and the power of $\mu_{A}(x)$ is the largest size of the Jordan block.
 * Compare these two theorems, we can know the combination of Jordan blocks with each eigenvalue.
