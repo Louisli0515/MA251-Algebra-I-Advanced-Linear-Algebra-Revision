@@ -130,7 +130,7 @@ In week 5's support class, we are still focusing on some algorithms.
 P = \begin{bmatrix} \mathbf{v}_1 & \mathbf{v}_2 & \mathbf{v}_3 & \mathbf{v}_4 \end{bmatrix}.
 ```
 
-### Powers of matrix
+#### Powers of matrix
 
 There are two methods to compute it.
 * ***Direct Calculation***
@@ -151,7 +151,7 @@ J_{\lambda,k}^{n} = \begin{bmatrix} \lambda^{n} & n\lambda^{n-1} & ... & C_{k-1}
 * To determine $\alpha$ and $\beta$, we need to solve $$(\lambda)^n = h(\lambda) = -\alpha \lambda + \beta,$$ and $$n(\lambda)^{n-1} = h'(\lambda) = \alpha.$$
 * Therefore, $$A^{n} = \alpha A+\beta I.$$
 
-### Function of matrix
+#### Function of matrix
 
 Similarly, it has two methods.
 
@@ -172,3 +172,22 @@ where $$f^{[k]}(z) = \frac{1}{k!}f^{(k)}(z).$$
 * Given the degree is 2, we take the Lagrangfe interpolation of $z^{n}$ at the roots of $(z+2)^{2}$ to be $h(z) = \alpha z+ \beta.$
 * To determine $\alpha$ and $\beta$, we solve $$f(\lambda) = h(\lambda) = -\alpha \lambda + \beta,$$ and $$f'(\lambda) = h'(\lambda) = \alpha.$$
 * Therefore, $$f(A) = \alpha A+\beta I.$$
+
+### Week 6
+
+[MA251_Algebra_I_week_6.pdf](https://github.com/Louisli0515/MA251-Algebra-I-Advanced-Linear-Algebra-Revision/files/11130611/MA251_Algebra_I_week_6.pdf)
+
+In week 6's support class, we focus more on quadratic forms and bilinear forms.
+
+#### Bilinear forms 
+
+* If given a quadratic form $\tau(x,y) = x_{1}y_{1}+x_{2}y_{2}+x_{3}y_{3}+x_{1}y_{3}$ for example, we first write its matrix where the rows representing the coefficient of $x_{i}$ (It is $y_{i}$ in this case) and columns representing the coefficient of $y_{i}$ (It is $x_{i}$ in this case).
+* Now check the matrix is symmetric or not by checking if $A = A^{T}$.
+* The ***left radical*** is defined as the kernel of $A^{T}$ and the ***right radical*** is defined as the kernel of $A$.
+* If asked to write the matrix in the new basis, first write out the change of basis matrix by writing vertically of the new basis, and then use the formula $$B = P^{T}AP$$ to find the matrix in the new basis.
+* To check if the matrix is non-degenerate or degenerate, check the rank of the matrix. If the rank of the matrix is ***full rank***, then it has no kernel and thus $\tau$ has zero right radical and it ***is non-degenerate***, otherwise it is ***not non-degenerate***.
+
+#### Quadratic forms
+
+* If given the quadratic forms $q_{1}(v) = -x^{2}+y^{2}$ for example, we first write its matrix, where (1,1)th entry represent the coefficient of $x^{2}; (1,2)th entry represent the coefficient of $x$; (2,1)th entry represent the coefficient of $y$; $(2,2)th entry represent the coefficient of $y^{2}$.
+* The signature is determined by the number of positive and negative ***eigenvalues*** of the matrix above, written in pairs.
