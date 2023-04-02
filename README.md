@@ -264,5 +264,12 @@ In week 8's support class, we focus on the following knowledge.
 
 * $n = 3$.
 
+<img width = 50% height = 50% src = https://user-images.githubusercontent.com/128298224/229384150-19e52d0b-5ba1-4312-a7a6-626bda175776.png>
+<img width = 50% height = 50% src = https://user-images.githubusercontent.com/128298224/229384152-39bbd54b-f955-49f9-ac14-ab2c43102635.png>
+<img width = 50% height = 50% src = https://user-images.githubusercontent.com/128298224/229384158-1a135492-fdab-4a41-92ab-bd214de19f0e.png>
+<img width = 50% height = 50% src = https://user-images.githubusercontent.com/128298224/229384159-1c2e35c0-ea11-4df8-be1c-300e4a579df7.png>
+<img width = 50% height = 50% src = https://user-images.githubusercontent.com/128298224/229384161-afb3caf3-37ff-4263-9c34-0b61289af591.png>
+
+
 
 
