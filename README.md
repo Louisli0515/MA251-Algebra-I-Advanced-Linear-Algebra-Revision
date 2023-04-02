@@ -258,4 +258,11 @@ In week 8's support class, we focus on the following knowledge.
 
 #### Different curves and surfaces
 
-* 
+* $n = 2$.
+
+<img width = 50% height = 50% src = https://user-images.githubusercontent.com/128298224/229383960-2a3544eb-b382-4b7d-92b6-b63e7f7fb421.png>
+
+* $n = 3$.
+
+
+
