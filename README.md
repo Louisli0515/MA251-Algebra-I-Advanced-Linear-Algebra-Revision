@@ -189,5 +189,57 @@ In week 6's support class, we focus more on quadratic forms and bilinear forms.
 
 #### Quadratic forms
 
-* If given the quadratic forms $q_{1}(v) = -x^{2}+y^{2}$ for example, we first write its matrix, where (1,1)th entry represent the coefficient of $x^{2}; (1,2)th entry represent the coefficient of $x$; (2,1)th entry represent the coefficient of $y$; $(2,2)th entry represent the coefficient of $y^{2}$.
+* If given the quadratic forms $q_{1}(v) = -x^{2}+y^{2}$ for example, we first write its matrix, where (1,1)th entry represent the coefficient of $x^{2}$; (1,2)th entry represent the coefficient of $x$; (2,1)th entry represent the coefficient of $y$; (2,2)th entry represent the coefficient of $y^{2}$.
 * The signature is determined by the number of positive and negative ***eigenvalues*** of the matrix above, written in pairs.
+
+### Week 7
+
+[MA251_Algebra_I_week_7.pdf](https://github.com/Louisli0515/MA251-Algebra-I-Advanced-Linear-Algebra-Revision/files/11130844/MA251_Algebra_I_week_7.pdf)
+
+In week 7's support class, we focus on two parts: ***Basis for quadratic forms*** and ***QR-decomposition***.
+
+#### Basis for quadratic forms
+
+* Given a quadratic form, we can find a basis in which the matrix of the quadratic form is diagonal.
+* ***First step***, check $a_{11}$ is 0 or not. If $a_{11} \ne 0$, then we are done in step 1; 
+* If $a_{11}=0$, but $a_{ii}\ne 0$ for some $i > 1$, then we interchange $\mathbf{b}_1$ and $\mathbf{b}_i$;  
+* If $a_{11}=0$ for all $i$, but there are some $i,j$ such that $a_{ij}\ne 0$, then we replace $\mathbf{b}_i$ with $\mathbf{b}_i+\mathbf{b}_j$;
+* If $a_{ij}=0$ for all $i$ and $j$, then the matrix is $\mathbf{0}$, which is diagonal. 
+* Write down the change of basis matrix $P$ in this step.
+
+* ***Second step***, replace $\mathbf{b}_i$ with $\mathbf{b}_i- \frac{a1i}{a11}\mathbf{b}_1.$ and fix $\mathbf{b}'_1 = \mathbf{b}_1$.
+* Now the change of basis matrix is 
+```math
+Q = \begin{bmatrix} 1 & -\frac{a12}{a11} & ... & -\frac{a1n}{a11}\\
+0 & 1 & ... & 0\\
+0 & 0 & ... & 0\\
+0 & 0 & ... & 1 \end{bmatrix}.
+```
+
+* Combining the change of basis matrices, $$P' = PQ,$$ and the new matrix in this basis is $$B = (P')^{T}AP'.$$
+
+* ***Third step***, if now $a_{11}\ne 0$, then we can focus on the smaller block $(n-1)\times(n-1)$ and repeat the previous steps.
+* Note that in ***step 2***, $\mathbf{b}_i = \mathbf{b}_i - \frac{a2i}{a22}\mathbf{b}_2$ and fix $\mathbf{b}''_1 = \mathbf{b}'_1$ and $\mathbf{b}''_2 = \mathbf{b}'_2$.
+* The change of basis matrix is 
+```math
+Q' = \begin{bmatrix} 1 & 0 & ... & 0\\
+0 & 1 & ... & -\frac{a2n}{a22}\\
+0 & 0 & ... & 0\\
+0 & 0 & ... & 1 \end{bmatrix}.
+```
+
+* Combining the change of basis matrices, $$P'' = P'Q',$$ and the new matrix in this basis is $$C = (P'')^{T}AP''.$$
+
+#### QR-decomposition
+
+* Grant-Schmidt process: Let $V$ be a euclidean space of dimension $n$ andd suppose that, for some $r$ with $0\leq r\leq n$, $\mathbf{f}_1,...,\mathbf{f}_r$ are vectors in $V$ such that $$\mathbf{f}_i\cdot\mathbf{f}_j = \delta ij$$ for $1\leq i,j\leq r$.
+* First check the determinant of a matrix is not 0.
+* Let $\mathbf{g}_1, \mathbf{g}_2,...,\mathbf{g}_n$ be the columns of the matrix $A$. 
+* ***First step***. Compute the first vector $\mathbf{f}_1$ by $$\mathbf{f}_1 = \frac{\mathbf{g}_1}{\left|\mathbf{g}_1\right|}.$$
+* ***Second step***. Take $\mathbf{f}'_2 = \mathbf{g}_2 - (\mathbf{g}_2\cdot\mathbf{f}_1)\mathbf{f}_1$ and $$\mathbf{f}_2 = \frac{\mathbf{f}'_2}{\left|\mathbf{f}'_2\right|}.$$
+* ***Third step***. Take $\mathbf{f}'_3 = \mathbf{g}_3 - (\mathbf{g}_3\cdot\mathbf{f}_1)\mathbf{f}_1 - (\mathbf{g}_3\cdot\mathbf{f}_2)\mathbf{f}_2$ and $$\mathbf{f}_3 = \frac{\mathbf{f}'_3}{\left|\mathbf{f}'_3\right|}.$$
+* Continue the step and 
+```math
+Q = \begin{bmatrix} \mathbf{f}_1 & \mathbf{f}_2 & ... & \mathbf{f}_n \end{bmatrix}.
+```
+* Since we know $R$ is upper-triangular, we just have to write $R$ in that form and multiply by $Q$ and compare the coefficients.
