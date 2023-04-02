@@ -243,3 +243,19 @@ Q' = \begin{bmatrix} 1 & 0 & ... & 0\\
 Q = \begin{bmatrix} \mathbf{f}_1 & \mathbf{f}_2 & ... & \mathbf{f}_n \end{bmatrix}.
 ```
 * Since we know $R$ is upper-triangular, we just have to write $R$ in that form and multiply by $Q$ and compare the coefficients.
+
+### Week 8
+
+[MA251_Algebra_I_week_8.pdf](https://github.com/Louisli0515/MA251-Algebra-I-Advanced-Linear-Algebra-Revision/files/11133466/MA251_Algebra_I_week_8.pdf)
+
+In week 8's support class, we focus on the following knowledge.
+
+#### Orthonormal basis
+
+* If we are asked to find an orthonormal basis in which the matrix is diagonal, the ***first step*** we should do is to find the characteristic polynomials.
+* ***Second step***, we find the corresponding eigenvectors and make them length 1.
+* ***Third  step***, check that if the dot product of the eigenvectors are 0.
+
+#### Different curves and surfaces
+
+* 
