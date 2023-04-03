@@ -232,7 +232,7 @@ Q' = \begin{bmatrix} 1 & 0 & ... & 0\\
 
 #### QR-decomposition
 
-* Grant-Schmidt process: Let $V$ be a euclidean space of dimension $n$ andd suppose that, for some $r$ with $0\leq r\leq n$, $\mathbf{f}_1,...,\mathbf{f}_r$ are vectors in $V$ such that $$\mathbf{f}_i\cdot\mathbf{f}_j = \delta ij$$ for $1\leq i,j\leq r$.
+* Grant-Schmidt process: Let $V$ be a euclidean space of dimension $n$ and suppose that, for some $r$ with $0\leq r\leq n$, $\mathbf{f}_1,...,\mathbf{f}_r$ are vectors in $V$ such that $$\mathbf{f}_i\cdot\mathbf{f}_j = \delta ij$$ for $1\leq i,j\leq r$.
 * First check the determinant of a matrix is not 0.
 * Let $\mathbf{g}_1, \mathbf{g}_2,...,\mathbf{g}_n$ be the columns of the matrix $A$. 
 * ***First step***. Compute the first vector $\mathbf{f}_1$ by $$\mathbf{f}_1 = \frac{\mathbf{g}_1}{\left|\mathbf{g}_1\right|}.$$
