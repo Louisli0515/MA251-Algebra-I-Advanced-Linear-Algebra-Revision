@@ -313,4 +313,10 @@ Also there are other lemmas and theorems about cosets.
 
 #### Kernel
 
-* Let $\phi:G\to H$ be a homomorphism, then the kernel $\ker(\phi)$ of $\phi$ is defined to be the set of elements of $G$ that map onto $0_{H}$, that is $$\ker(\phi) = {g|g\in G, \phi(g) = 0_{H}}.$$
+* Let $\phi:G\to H$ be a homomorphism, then the kernel $\ker(\phi)$ of $\phi$ is defined to be the set of elements of $G$ that map onto $0_{H}$, that is $$\ker(\phi) = \set{g|g\in G, \phi(g) = 0_{H}}.$$ Note that $\ker(\phi)$ always contains $0_{G}$.
+* Let $\phi:G\to H$ be a homomorphism. Then $\phi$ is injective if and only if $\ker(\phi) = \set{0_{G}}.$
+* Let $\phi:G\to H$ be a group homomorphism with kernel $K$ and let $A$ be a subgroup of $G$. Then induced map $\bar{\phi}:G/A\to H$ via $\bar{\phi}(A+g) = \phi(g)$ for all $g\in G$ is a group homomorphism if and only if $A\leq K$.
+
+#### The First Isomorphism Theorem
+
+* Let $\phi:G\to H$ be a homomorphism with kernel $K$. Then $G/K\cong\text{im}(\phi).$ More precisely, there is an isomorphism $\bar{\phi}:G/K\to\text{im}(\phi)$ defined by $$\bar{\phi}(K+g) = \phi(g)$$ for all $g\in G$.
