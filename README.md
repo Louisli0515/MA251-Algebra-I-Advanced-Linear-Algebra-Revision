@@ -272,5 +272,45 @@ In week 8's support class, we focus on the following knowledge.
 <img width = 50% height = 50% src = https://user-images.githubusercontent.com/128298224/229384161-afb3caf3-37ff-4263-9c34-0b61289af591.png>
 
 
+### Week 9
 
+[MA251_Algebra_I_week_9.pdf](https://github.com/Louisli0515/MA251-Algebra-I-Advanced-Linear-Algebra-Revision/files/11143031/MA251_Algebra_I_week_9.pdf)
 
+In week 9's support class, we are moving on to groups.
+
+#### SVD
+
+* Given any real $k\times m$ matrix $A$, there exists unique singular values $\gamma_{1}\geq\gamma_{2}\geq...\geq\gamma_{n} > 0$ and orthogonal matrices $P$ and $Q$ such that 
+```math
+ \begin{bmatrix} D & 0\\
+0  & 0
+\end{bmatrix} = P^{T}AQ
+```
+where $D = \text{diag}(\gamma_{1},...,\gamma_{n})$.
+* The steps of finding SVD follows from QR-decomposition but now $Q = P$ and $R = Q$ (all left symbols represent the ones in QR-decomposition); However, we should start with the matrix $A^{T}A$.
+
+#### Cosets
+
+Something about cosets should be remembered:
+
+The following are equivalent for $g,k\in G$:
+
+* $k\in H+g$
+* $H+g = H+k$
+* $k-g\in H$.
+
+Also there are other lemmas and theorems about cosets.
+
+* If $H$ is a subgroup of the abelian group $G$ and $H+g, H+k$ are cosets of $H$ in $G$, then $$(H+g)+(H+k) = H+(g+k).$$
+
+#### Isomorphism
+
+* A bijection $\phi:G\to H$ between two groups is called an isomorphism if $$\phi(g+h) = \phi(g)+\phi(h)$$ for all $g,h\in G$.
+
+#### Homomorphisms
+
+* Let $G$ and $H$ be groups. A homomorphism $\phi$ from $G$ to $H$ is a map $\phi:G\to H$ such that $$\phi(g_{1}+g_{2}) = \phi(g_{1})+\phi(g_{2})$$ for all $g_{1},g_{2}\in G$.
+
+#### Kernel
+
+* Let $\phi:G\to H$ be a homomorphism, then the kernel $\ker(\phi)$ of $\phi$ is defined to be the set of elements of $G$ that map onto $0_{H}$, that is $$\ker(\phi) = {g|g\in G, \phi(g) = 0_{H}}.$$
