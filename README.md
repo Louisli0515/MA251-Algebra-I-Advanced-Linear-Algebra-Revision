@@ -320,3 +320,56 @@ Also there are other lemmas and theorems about cosets.
 #### The First Isomorphism Theorem
 
 * Let $\phi:G\to H$ be a homomorphism with kernel $K$. Then $G/K\cong\text{im}(\phi).$ More precisely, there is an isomorphism $\bar{\phi}:G/K\to\text{im}(\phi)$ defined by $$\bar{\phi}(K+g) = \phi(g)$$ for all $g\in G$.
+
+### Week 10
+
+[MA251_Algebra_I_week_10.pdf](https://github.com/Louisli0515/MA251-Algebra-I-Advanced-Linear-Algebra-Revision/files/11159176/MA251_Algebra_I_week_10.pdf)
+
+In week 10's support class, we focus more on quotient groups and cyclic groups.
+
+
+#### Proposition about group homomorphism
+
+Consider elements $g_{1},...,g_{n}$ of an abelian group $G$. It is possible to extend this assignment $\phi(x_i) = g_{i}$ to a group homomorphism $\phi:\mathbb{Z}^{n}\to G$. We define $\phi((a_{1},a_{2},...,a_{n})^{T}) = \displaystyle\sum_{i=1}^{n}a_{i}g_{i}$, then 
+
+* The function $\phi$ is a group homomorphism.
+* The set of elements $\set{g_{i}}$ are linearly independent if and only if $\phi$ is injective.
+* The set of elements $\set{g_{i}}$ span $G$ if and only if $\phi$ is surjective.
+* The set of elements $\set{g_{i}}$ form a free basis of $G$ if and only if $\phi$ is an isomorphism.
+
+#### Corollary about group homomorphism
+
+Let $G$ be a free abelian group with a free basis $g_{1},...,g_{n}$. Let $H$ be an abelian group and $a_{1},...,a_{n}\in H$. Then there exists a unique group homomorphism $\phi:G\to H$ such that $$\phi(g_{i}) = a_{i}$$ for all $i$.
+
+#### Techniques when checking if it forms a basis.
+
+* Given $n$ vectors, and we want to check if they form a basis in $\mathbb{R}^{n}$. The old-fashion way is to check their linear independence and span. 
+* Another way is write them in columns 
+```math
+A = \begin{bmatrix} \mathbf{v}_{1}&...&\mathbf{v}_{n} \end{bmatrix}.
+```
+Then we find its determinant to see if it is 1, if it is 1, then its columns form a basis in $\mathbb{R}^{n}$.
+
+* If the determinant of it is non-zero, then immediately we can conclude the vectors are linearly independent.
+
+#### Direct sum of abelian groups
+
+* The direct sum of a finite number of abelian groups is the same as their cartesian product, just with different notation. For example, try writing out all the 15 elements of $\mathbb{Z}/3\mathbb{Z}\oplus\mathbb{Z}/5\mathbb{Z}$.
+* They will look like $a\oplus b$ where $a$ is an integer mod 3 and $b$ is an integer mod 5. Therefore, for example $$(2\oplus 3)+(1\oplus 4) = ((2+1)\mod 3)\oplus((3+4)\mod 5) = 0\oplus 2.$$
+* The identity element will be $0\oplus 0$. 
+* The inverse of $(2\oplus 3)$ will be $$-(2\oplus 3) = (-2\mod 3\oplus-3\mod 5) = 1\oplus 2.$$
+* Any subgroup of prime order would be ***isomorphic*** to a cyclic group of its order.
+* Let $G = G_{1}\oplus G_{2}\oplus...\oplus G_{n}$ be a finite abelian group. The order of $g = (g_{1},g_{2},...,g_{n})$ is the least common multiple of the orders $|g_{i}|$ of the components of $g$.
+
+#### Smith Normal Form
+
+* Let $A$ be an $m\times n$ matrix over $\mathbb{Z}$ with rank $r$. The uniquely determined diagonal matrix, where $d_{i}$ satisfy $d_{i}>0$ for $1\leq i\leq r$ and $d_{i}\vert d_{i+1}$ for $1\leq i < r$ is called the unimodular Smith normal form of $A$.
+
+How to find the SNF of a matrix?
+
+* ***Step 1***: Find $d_{1}$, which is the greatest common divisor of all the entries of $A$.
+* ***Step 2***: If $d_{1}$ occurs as an entry in $A$ move it to the (1,1)th entry using column and row operations. 
+* If $d_{1}$ does not occur, let $x$ be the smallest entry occuring in $A$, say in position $(i,j)$. Does $x$ divide everything else in the $i$th row and $j$th column? If not, let $y$ be an entry that $x$ does not divide, in position $(k,l)$ with $k=i$ or $l=j$. Then $y=sx+r$ with $r < x$ and using column and row operations, we can obtain $r=y-sx$ as an entry of $A$.
+* If $x$ divides everything else in row $i$ and columns $j$. We start by clearing all of these entries to 0.
+* ***Step 3***: With $d_{1}$ in the (1,1)th entry, we can use it to clear everything else in the first row and column since $d_{1}$ divides all entries in the matrix.
+* ***Step 4***: We now go back to ***Step 1***, working on the $(m-1)\times(n-1)$ matrix in the bottom right hand corner. Repeating this process will terminate and will yield the SNF of $A$.
