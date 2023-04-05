@@ -323,7 +323,8 @@ Also there are other lemmas and theorems about cosets.
 
 ### Week 10
 
-[MA251_Algebra_I_week_10.pdf](https://github.com/Louisli0515/MA251-Algebra-I-Advanced-Linear-Algebra-Revision/files/11159176/MA251_Algebra_I_week_10.pdf)
+[MA251_Algebra_I_week_10.pdf](https://github.com/Louisli0515/MA251-Algebra-I-Advanced-Linear-Algebra-Revision/files/11159645/MA251_Algebra_I_week_10.pdf)
+
 
 In week 10's support class, we focus more on quotient groups and cyclic groups.
 
