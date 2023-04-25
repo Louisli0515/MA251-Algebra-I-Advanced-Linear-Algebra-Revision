@@ -419,7 +419,7 @@ How to find the SNF of a matrix?
 
 * ***Step 1***: Find $d_{1}$, which is the greatest common divisor of all the entries of $A$.
 * ***Step 2***: If $d_{1}$ occurs as an entry in $A$ move it to the (1,1)th entry using column and row operations. 
-* If $d_{1}$ does not occur, let $x$ be the smallest entry occuring in $A$, say in position $(i,j)$. Does $x$ divide everything else in the $i$th row and $j$th column? If not, let $y$ be an entry that $x$ does not divide, in position $(k,l)$ with $k=i$ or $l=j$. Then $y=sx+r$ with $r < x$ and using column and row operations, we can obtain $r=y-sx$ as an entry of $A$.
+* If $d_{1}$ does not occur, let $x$ be the smallest entry occuring in $A$, say in position $(i,j)$. Does $x$ divide everything else in the $i$ th row and $j$ th column? If not, let $y$ be an entry that $x$ does not divide, in position $(k,l)$ with $k=i$ or $l=j$. Then $y=sx+r$ with $r < x$ and using column and row operations, we can obtain $r=y-sx$ as an entry of $A$.
 * If $x$ divides everything else in row $i$ and columns $j$. We start by clearing all of these entries to 0.
 * ***Step 3***: With $d_{1}$ in the (1,1)th entry, we can use it to clear everything else in the first row and column since $d_{1}$ divides all entries in the matrix.
 * ***Step 4***: We now go back to ***Step 1***, working on the $(m-1)\times(n-1)$ matrix in the bottom right hand corner. Repeating this process will terminate and will yield the SNF of $A$.
