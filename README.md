@@ -268,7 +268,7 @@ Q = \begin{bmatrix} 1 & -\frac{a12}{a11} & ... & -\frac{a1n}{a11}\\
 * Combining the change of basis matrices, $$P' = PQ,$$ and the new matrix in this basis is $$B = (P')^{T}AP'.$$
 
 * ***Third step***, if now $a_{11}\ne 0$, then we can focus on the smaller block $(n-1)\times(n-1)$ and repeat the previous steps.
-* Note that in ***step 2***, $\mathbf{b}_i = \mathbf{b}_i - \frac{a2i}{a22}\mathbf{b}_2$ and fix $\mathbf{b}''_1 = \mathbf{b}'_1$ and $\mathbf{b}''_2 = \mathbf{b}'_2$.
+* Note that in ***step 2***, $\mathbf{b}_i = \mathbf{b}_i - \frac{a2i}{a22}\mathbf{b}'_2$ and fix $\mathbf{b}''_1 = \mathbf{b}'_1$ and $\mathbf{b}''_2 = \mathbf{b}'_2$.
 * The change of basis matrix is 
 ```math
 Q' = \begin{bmatrix} 1 & 0 & ... & 0\\
