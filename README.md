@@ -218,7 +218,7 @@ where $$f^{[k]}(z) = \frac{1}{k!}f^{(k)}(z).$$
 
 * ***Lagrange's Interpolation***
 * Find the minimal polynomial $\mu_{A}(x)$ first, here suppose again $\mu_{A}(x) = (z+2)^{2}.$
-* Given the degree is 2, we take the Lagrangfe interpolation of $z^{n}$ at the roots of $(z+2)^{2}$ to be $h(z) = \alpha z+ \beta.$
+* Given the degree is 2, we take the Lagrange interpolation of $z^{n}$ at the roots of $(z+2)^{2}$ to be $h(z) = \alpha z+ \beta.$
 * To determine $\alpha$ and $\beta$, we solve $$f(\lambda) = h(\lambda) = -\alpha \lambda + \beta,$$ and $$f'(\lambda) = h'(\lambda) = \alpha.$$
 * Therefore, $$f(A) = \alpha A+\beta I.$$
 
