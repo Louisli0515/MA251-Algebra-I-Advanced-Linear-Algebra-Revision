@@ -294,7 +294,7 @@ Q = \begin{bmatrix} \mathbf{f}_1 & \mathbf{f}_2 & ... & \mathbf{f}_n \end{bmatri
 * Since we know $R$ is upper-triangular, we just have to write $R$ in that form and multiply by $Q$ and compare the coefficients or $Q$ is given by
 
 ```math
-Q = \begin{bmatrix} \mathbf{f}_1\cdot\mathbf{g}_{1} & \mathbf{f}_1\cdot\mathbf{g}_{2} & ... & \mathbf{f}_{1}\cdot\mathbf{g}_{n}\\ 0 & \mathbf{f}_{2}\cdot\mathbf{g}_{2} & ... & \mathbf{f}_{2}\cdot \mathbf{g}_{n}\\ 0 & ... & \mathbf{f}_{n}\cdot\mathbf{g}_{n}\end{bmatrix}.
+Q = \begin{bmatrix} \mathbf{f}_1\cdot\mathbf{g}_{1} & \mathbf{f}_1\cdot\mathbf{g}_{2} & ... & \mathbf{f}_{1}\cdot\mathbf{g}_{n}\\ 0 & \mathbf{f}_{2}\cdot\mathbf{g}_{2} & ... & \mathbf{f}_{2}\cdot \mathbf{g}_{n}\\ \vdots & \vdots & \ddots & \vdots \\0 & 0 & ... & \mathbf{f}_{n}\cdot\mathbf{g}_{n}\end{bmatrix}.
 ```
 
 ### Week 8
